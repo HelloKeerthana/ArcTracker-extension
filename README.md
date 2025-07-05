@@ -1,8 +1,13 @@
 # Arc Tracker
 
-Arc Tracker is a Chrome extension that helps users monitor their daily browser activity. 
-It tracks time spent on various websites, provides visualizations, categorizes browsing behavior 
-as either productive or entertainment-based, and presents a summary dashboard for self-assessment.
+Arc Tracker is a Chrome extension made for those of us living in constant main character energy.  
+Inspired by **Ayanokoji** from *Classroom of the Elite*—you know, the guy who’s always ten steps ahead without flexing it—I built this to track whether I’m actually cooking (grinding) or just getting cooked (doom scrolling).
+
+Since everyone’s talking about “arcs” lately—villain arc, redemption arc, gym arc—I figured… why not track your **browser arc**?
+
+This extension logs how much time you spend on each site, splits it into *productive* vs *entertainment*, and gives you a “mood score” and arc label. Plus, it visualizes everything with clean graphs and lets you tag custom sites. Use it to hold yourself accountable or just flex your "Winter Arc" stats at the end of the day.
+
+Stay sharp.
 
 ---
 
