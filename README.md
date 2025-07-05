@@ -1,4 +1,4 @@
-# Arc Tracker
+# ArcTracker
 
 Arc Tracker is a Chrome extension made for those of us living in constant main character energy.  
 Inspired by **Ayanokoji** from *Classroom of the Elite*—you know, the guy who’s always ten steps ahead without flexing it—I built this to track whether I’m actually cooking (grinding) or just getting cooked (doom scrolling).
