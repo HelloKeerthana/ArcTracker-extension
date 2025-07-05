@@ -1,46 +1,98 @@
-# Getting Started with Create React App
+# Arc Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Arc Tracker is a Chrome extension that helps users monitor their daily browser activity. 
+It tracks time spent on various websites, provides visualizations, categorizes browsing behavior 
+as either productive or entertainment-based, and presents a summary dashboard for self-assessment.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Real-Time Clock**: Displays the current time in the header.
+- **Domain-Level Tracking**: Logs time spent on each visited domain.
+- **Top Sites Summary**: Highlights the top 3 most visited domains.
+- **Time Visualization**: Pie chart representation of time distribution.
+- **Mood Score & Arc Mapping**: Scores productivity level (0 to 10) and assigns a corresponding personal "arc" based on usage patterns.
+- **Category Tagging**: Users can tag domains manually as "productive" or "entertainment".
+- **Data Export**: One-click CSV download of usage logs.
+- **Storage Management**: Reset button clears all saved data.
+- **Persistent Data**: Uses `chrome.storage.local` for browser-based persistence and `localStorage` for user-defined tags.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+Arc-Tracker/
+├── public/
+│ ├── popup.html # Popup interface with dashboard link
+│ └── dashboard.html # Full data dashboard view
+├── icons/
+│ └── download.jpg # Extension icon
+├── chart.min.js # Chart.js library for pie chart rendering
+├── dashboard.js # Main logic for UI rendering and data handling
+├── background.js # (Optional) service worker script
+├── manifest.json # Chrome Extension configuration
+└── README.md # Project documentation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Arc & Mood Mapping
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Each mood score (0–10) is mapped to a specific "arc" that reflects overall productivity for the day:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Score | Arc Name               | Description                                           |
+|-------|------------------------|-------------------------------------------------------|
+| 10    | Villain Arc            | Highly productive with zero distraction.             |
+| 9     | Winter Arc             | Near-peak performance, strong discipline.            |
+| 8     | Hustle Arc             | Strong work ethic and focused attention.             |
+| 7     | Discipline Arc         | Maintains good balance with high productive output.  |
+| 6     | Rise Arc               | Trending productive, moderate distractions.          |
+| 5     | Equilibrium Arc        | Balanced between work and leisure.                   |
+| 4     | Redemption Arc         | Attempting recovery from distractions.               |
+| 3     | Procrastination Arc    | More time spent on non-productive activities.        |
+| 2     | Denial Arc             | Heavily entertainment-focused with minor effort.     |
+| 1     | Recovery Arc           | Very low productivity, but some effort made.         |
+| 0     | Rock Bottom Arc        | Entirely distracted, no productive time recorded.    |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Download or clone this repository.
+2. Open Chrome and navigate to `chrome://extensions`.
+3. Enable "Developer Mode" in the top right.
+4. Click "Load unpacked" and select the project folder.
+5. Pin the Arc Tracker extension to the toolbar for easy access.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Open the extension via the popup icon.
+- Click **"Open Dashboard"** to view detailed usage analytics.
+- Manually tag domains as "productive" or "entertainment" using the input field.
+- Export your data via the "Export CSV" button.
+- Reset the data store anytime using the "Reset" button.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Export Format
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+CSV exports follow this structure:
+
+Domain,Time(seconds)
+youtube.com,1234
+github.com,567
+
+---
+
+## Notes
+
+- Icons must be correctly linked and included under the `icons/` directory.
+- Ensure `download.jpg` is accessible and declared in both `manifest.json` and referenced properly in `popup.html` and `dashboard.html`.
+
+---
+
+## License
+
+This project is licensed under the MIT License. You are free to use, modify, and distribute this extension in accordance with the license terms.
