@@ -19,19 +19,6 @@ as either productive or entertainment-based, and presents a summary dashboard fo
 - **Persistent Data**: Uses `chrome.storage.local` for browser-based persistence and `localStorage` for user-defined tags.
 
 ---
-Arc-Tracker/
-├── public/
-│ ├── popup.html # Popup interface with dashboard link
-│ └── dashboard.html # Full data dashboard view
-├── icons/
-│ └── download.jpg # Extension icon
-├── chart.min.js # Chart.js library for pie chart rendering
-├── dashboard.js # Main logic for UI rendering and data handling
-├── background.js # (Optional) service worker script
-├── manifest.json # Chrome Extension configuration
-└── README.md # Project documentation
----
-
 ## Arc & Mood Mapping
 
 Each mood score (0–10) is mapped to a specific "arc" that reflects overall productivity for the day:
