@@ -19,9 +19,6 @@ as either productive or entertainment-based, and presents a summary dashboard fo
 - **Persistent Data**: Uses `chrome.storage.local` for browser-based persistence and `localStorage` for user-defined tags.
 
 ---
-
-## Project Structure
-
 Arc-Tracker/
 ├── public/
 │ ├── popup.html # Popup interface with dashboard link
@@ -33,7 +30,6 @@ Arc-Tracker/
 ├── background.js # (Optional) service worker script
 ├── manifest.json # Chrome Extension configuration
 └── README.md # Project documentation
-
 ---
 
 ## Arc & Mood Mapping
