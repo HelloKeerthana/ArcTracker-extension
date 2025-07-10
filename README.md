@@ -1,4 +1,5 @@
-ArcTracker
+**ArcTracker**
+
 ArcTracker is a chrome extension made for those of us living in constant main character energy
 inspired by ayanokoji from classroom of the elite, the guy who’s always ten steps ahead without flexing it, i built this to track whether i’m actually cooking or just getting cooked
 
@@ -8,7 +9,8 @@ this extension logs how much time you spend on each site, sorts it into producti
 
 stay sharp
 
-features
+**features**
+
 real time clock at the top
 
 domain level tracking for every site you visit
@@ -27,23 +29,27 @@ reset button to wipe all stored stats
 
 uses chrome storage for your history and local storage for your tags
 
-arc and mood mapping
-each score from zero to ten maps to an arc that reflects your day
+**arc and mood mapping****
+****each score from zero to ten maps to an arc that reflects your day****
 
-score	arc name	what it means
-10	villain arc	zero distraction. full focus. untouchable
-9	winter arc	cold discipline. near peak performance
-8	hustle arc	solid work ethic. focused attention
-7	discipline arc	productive and balanced
-6	rise arc	getting there. still some distractions
-5	equilibrium arc	balanced mix of work and play
-4	redemption arc	trying to bounce back
-3	procrastination arc	distractions winning
-2	denial arc	mostly scrolling but pretending it’s research
-1	recovery arc	not great but you showed up
-0	rock bottom arc	no work. all scroll. total chaos
+****score	arc name	what it means**
+| score | arc name              | description                                      |
+|-------|------------------------|--------------------------------------------------|
+| 10    | villain arc            | zero distraction. full focus. untouchable        |
+| 9     | winter arc             | cold discipline. near peak performance           |
+| 8     | hustle arc             | solid work ethic. focused attention              |
+| 7     | discipline arc         | productive and balanced                          |
+| 6     | rise arc               | getting there. still some distractions           |
+| 5     | equilibrium arc        | balanced mix of work and play                    |
+| 4     | redemption arc         | trying to bounce back                            |
+| 3     | procrastination arc    | distractions winning                             |
+| 2     | denial arc             | mostly scrolling but pretending it’s research    |
+| 1     | recovery arc           | not great but you showed up                      |
+| 0     | rock bottom arc        | no work. all scroll. total chaos
 
-installation
+
+**installation**
+
 download or clone the repo
 
 open chrome and go to chrome://extensions
@@ -54,7 +60,8 @@ click load unpacked and select this project folder
 
 pin arctracker to your toolbar so it stays close
 
-usage
+**usage**
+
 click the extension icon to open
 
 use the dashboard to see your stats
