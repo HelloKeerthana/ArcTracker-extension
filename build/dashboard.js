@@ -1,4 +1,3 @@
-// 🕒 Live Clock
 function updateClock() {
   const now = new Date();
   document.getElementById("clock").textContent = now.toLocaleTimeString();
@@ -6,7 +5,6 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-// 🌐 Load category tags from localStorage
 function getCustomTags() {
   const tags = localStorage.getItem("domainTags");
   return tags ? JSON.parse(tags) : {};
@@ -62,7 +60,6 @@ function loadData() {
       dataList.appendChild(li);
     }
 
-    // 🎯 Top 3 Sites
     const topList = entries.sort((a, b) => b.seconds - a.seconds).slice(0, 3);
     document.getElementById("top-sites").innerHTML = topList.map((e, i) =>
       `#${i + 1} ${e.domain} (${e.seconds}s)`
@@ -83,7 +80,6 @@ function loadData() {
     document.getElementById("mood").innerHTML = `Mood: ${cookedScale}/10<br>${moodData.mood}`;
     document.getElementById("arc-label").textContent = moodData.arc;
 
-    // 📊 Pie Chart
     if (labels.length > 0) {
       const ctx = document.getElementById("timePie").getContext("2d");
       if (window.pieChart) window.pieChart.destroy();
@@ -122,7 +118,7 @@ function loadData() {
   });
 }
 
-// 🍳 Mood Messages (0 = cooked, 10 = slayed)
+// Mood Messages (0 = cooked, 10 = slayed)
 function getMoodMessage(scale) {
   const arcs = {
     0: "🥵 Rock Bottom Arc",
@@ -156,7 +152,7 @@ function getMoodMessage(scale) {
 }
 
 
-// 🗑️ Reset
+// Reset
 document.getElementById("clear-btn").addEventListener("click", () => {
   chrome.storage.local.clear(() => {
     alert("Data reset successfully!");
@@ -164,7 +160,7 @@ document.getElementById("clear-btn").addEventListener("click", () => {
   });
 });
 
-// 📤 Export CSV
+// Export CSV
 document.getElementById("export-btn").addEventListener("click", () => {
   chrome.storage.local.get(null, (data) => {
     let csv = "Domain,Time(seconds)\n";
@@ -182,7 +178,7 @@ document.getElementById("export-btn").addEventListener("click", () => {
   });
 });
 
-// 🏷️ Add custom domain category
+// Add custom domain category
 document.getElementById("add-tag").addEventListener("click", () => {
   const domain = document.getElementById("custom-domain").value.trim();
   const category = document.getElementById("custom-category").value;
