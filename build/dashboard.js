@@ -65,12 +65,10 @@ function loadData() {
       `#${i + 1} ${e.domain} (${e.seconds}s)`
     ).join("<br>");
 
-    // 📆 Totals
     const dailyMins = Math.round(totalSeconds / 60);
     const weeklyMins = Math.round(totalSeconds / 60); // simulated
     document.getElementById("totals").textContent = `Today: ${dailyMins} mins | This week: ${weeklyMins} mins`;
 
-    // 💀 Mood Indicator (10 = slayed, 0 = cooked)
     const cookedScale = entertainmentTime === 0 && productiveTime > 0
       ? 10
       : productiveTime === 0
