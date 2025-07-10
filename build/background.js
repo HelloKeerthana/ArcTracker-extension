@@ -1,5 +1,5 @@
 chrome.runtime.onInstalled.addListener(() => {
-  console.log("Arc Tracker Extension Installed 🚀");
+  console.log("Arc Tracker Extension Installed ");
 });
 
 let activeTabId = null;
@@ -11,7 +11,7 @@ function saveTime(domain, duration) {
     const updated = previous + duration;
 
     chrome.storage.local.set({ [domain]: updated });
-    console.log(`[ArcTracker] ${domain} ➤ +${duration.toFixed(1)}s → Total: ${updated.toFixed(1)}s`);
+    console.log(`[ArcTracker] ${domain} -> +${duration.toFixed(1)}s → Total: ${updated.toFixed(1)}s`);
   });
 }
 
